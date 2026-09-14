@@ -1,0 +1,12 @@
+{
+  "name": "markit-database-portal",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Private Drive-backed case management portal for MarkIt Legal (Phase 1, Step 1: document portal).",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "netlify dev"
+  }
+}

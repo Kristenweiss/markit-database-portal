@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MarkIt Database</title>
+<link rel="stylesheet" href="/app/style.css">
+</head>
+<body class="login-page">
+  <div class="login-card">
+    <h1>MarkIt Database</h1>
+    <p>Private document portal for MarkIt Legal.</p>
+    <p id="error-msg" class="error" hidden></p>
+    <a class="btn" href="/.netlify/functions/auth-start">Sign in with Google</a>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const err = params.get('error');
+    if (err) {
+      const elMsg = document.getElementById('error-msg');
+      elMsg.textContent = err;
+      elMsg.hidden = false;
+    }
+  </script>
+</body>
+</html>

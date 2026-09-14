@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MarkIt Database — Dashboard</title>
+<link rel="stylesheet" href="/app/style.css">
+</head>
+<body class="app-page">
+  <header class="topbar">
+    <span class="brand">MarkIt Database</span>
+    <span id="user-email"></span>
+    <a href="/.netlify/functions/logout" class="link">Sign out</a>
+  </header>
+
+  <main>
+    <div id="connect-banner" class="banner" hidden>
+      <p>This app hasn't been given access to your MarkIt Database folder yet. Google only lets it see folders you've explicitly picked.</p>
+      <button id="connect-btn" class="btn">Connect Drive folder</button>
+    </div>
+
+    <nav id="breadcrumb" class="breadcrumb"></nav>
+
+    <div class="toolbar">
+      <button id="new-folder-btn" class="btn-secondary">New folder</button>
+      <label class="btn-secondary file-label">
+        Upload file
+        <input type="file" id="file-input" hidden>
+      </label>
+    </div>
+
+    <p id="status-msg" class="status" hidden></p>
+
+    <table class="file-table">
+      <thead>
+        <tr><th>Name</th><th>Modified</th><th></th></tr>
+      </thead>
+      <tbody id="file-list"></tbody>
+    </table>
+  </main>
+
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="/app/app.js"></script>
+</body>
+</html>
