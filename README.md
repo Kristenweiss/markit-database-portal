@@ -29,7 +29,7 @@ Your session is a token in an encrypted, HTTP-only browser cookie (not a databas
    - Save the Client ID and Client Secret.
 5. APIs & Services > Credentials > Create Credentials > API key:
    - This is for the Picker widget only — a separate credential from the OAuth client, needed even though everything else here avoids one.
-   - Restrict it: API restrictions > Picker API; Application restrictions > HTTP referrers > your Netlify domain.
+   - Restrict it: API restrictions > Picker API; Application restrictions > Websites (this is the current Cloud Console name for what used to be called "HTTP referrers") > add `https://YOUR-SITE.netlify.app/*`, swapping in your real site name once you have it.
 
 **Heads up:** this API key is an addition beyond what the spec's section 11 setup list mentions — it's a necessary piece for the one-time folder-picker step, not something I could avoid while keeping to `drive.file`.
 
