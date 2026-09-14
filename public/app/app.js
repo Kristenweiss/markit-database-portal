@@ -13,6 +13,7 @@
     userEmail: document.getElementById('user-email'),
     connectBanner: document.getElementById('connect-banner'),
     connectBtn: document.getElementById('connect-btn'),
+    connectBtnToolbar: document.getElementById('connect-btn-toolbar'),
     breadcrumb: document.getElementById('breadcrumb'),
     fileList: document.getElementById('file-list'),
     statusMsg: document.getElementById('status-msg'),
@@ -243,6 +244,7 @@
     await loadPickerConfig();
 
     elz.connectBtn.addEventListener('click', openPicker);
+    elz.connectBtnToolbar.addEventListener('click', openPicker);
     elz.newFolderBtn.addEventListener('click', createFolder);
     elz.fileInput.addEventListener('change', (e) => {
       const file = e.target.files[0];
